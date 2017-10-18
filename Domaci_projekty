@@ -1,1 +1,114 @@
+# 21. čísla do sta - nefunguje:
+for cislo in range(10):
+    if cislo == cislo%3== 0  and cislo%5 == 0:
+        print("bum-bác")
+    elif cislo == cislo%3 ==0:
+        print("bum")
+    elif cislo == cislo%5== 0:
+        print("bác")
+    else:
+        print(cislo)
+
+# 20. sudé?
+cislo = float(input("Zadej číslo a povím ti, jestli je sudé"))
+if cislo%2 ==0:
+    print("Číslo je sudé.")
+else:
+    print("Číslo je liché.")
+
+#19. součet třech čísel
+cislo_1 = float(input("Zadej první číslo: "))
+cislo_2 = float(input("Zadej druhé číslo: "))
+cislo_3 = float(input("zadej třetí číslo: "))
+soucet = cislo_1+cislo_2+cislo_3
+
+if soucet > 10:
+    print("Součet zadaných čísel je větší než 10.")
+else:
+    print("Součet zadaných čísel je nižší než 10.")
+
+#14. úprava cyklu, aby mohl zadat uživatel
+#zpět k číslu 9:
+radky = int(input("Zadej počet řádků"))
+sloupce = int(input("Zadej počet sloupců"))
+pocet_sloupcu = sloupce - 1
+for radky in range (radky):
+    for sloupec in range(pocet_sloupcu):
+        print("X ", end="") #tady jsem se napřed zamotala, nedošlo mi, že mohu do printu dát rovnou X s mezerou a chtěla jsem tam dávat sep...
+    print ("X ")
+
+# 10. a 11. nemám
+# zpět k číslu 12
+pocet_radek = int(input("Zadej počet řádků"))
+for radek in range(pocet_radek):
+     if radek ==0:
+         print("první řádek")
+     else:
+         print("není první")
+
+#zpět k číslu 13
+pocet_radek = int(input("Zadej počet řádek"))
+pocet_sloupcu = int(input("Zadej počet sloupců"))
+sloupec = pocet_sloupcu-1
+
+for radek in range(pocet_radek):
+    if radek == 0 or radek == pocet_radek:
+        for sloupec in range(sloupec):
+            print("X ", end="")
+        print("X ")
+    else:
+        print ("X ")
+        for sloupec in range(pocet_sloupcu):
+            print ("  ", end="")
+        print ("X ")
+
+#13. cyklus for a if - píšu jednoduchou verzi, která mi pěkně fungovala, pak se to pokusila zapsat "lépe" v dalším úkolu a úplně to nedopadlo :-)
+for radek in range(5):
+    if radek == 0 or radek ==4:
+        print("X X X X X X")
+    else:
+        print("X         X")
+
+
+#12. cyklus for a if
+for radek in range(4):
+    if radek ==0:
+        print("první řádek")
+    else:
+        print("není první")
+
+# 11. trojúhelník z X
+for X in range(4):
+    print("X ")
+
+# 10.násobilka - u té jsem se dost zasekla...
+cislo = 0
+sloupec = 1
+for radky in range (5):
+    for sloupec in range(4):
+        print(cislo+ sloupec, end="")
+    print(cislo)
+
+
+#9. cyklus for a end pro print
+for radky in range (5):
+    for sloupec in range(4):
+        print("X ", end="") #tady jsem se napřed zamotala, nedošlo mi, že mohu do printu dát rovnou X s mezerou a chtěla jsem tam dávat sep...
+    print ("X ")
+
+#8. cyklus for
+from math import sqrt
+mocnenec = 0
+for mocnenec in range(5):
+    print(mocnenec,"na druhou je",(mocnenec)**2)
+
+#6. cyklus for
+cislo_radku = 0
+for cislo_radku in range(5):
+    print("Řádek",cislo_radku)
+
+
+#5. cyklus for a funkce range ()
+for i in range(4):
+  print("a")
 
