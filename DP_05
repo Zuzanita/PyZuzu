@@ -1,3 +1,169 @@
+#13. Piškvorky1d - vím, že by mělo být pod definicí všech ostatních funkcí, ale i tak nefungovalo....posílám,jak jsem o tom uvažovala a poprosila bych o nasměrování, kde jsem co nedomyslela. Díky
+def piskovrky1d(pole):
+    "Počítač a hráč hrají piškovrky"
+    while vyhodnotit(pole) == "-":
+        tah_hrace(pole)
+        tah_pocitace(pole)
+        vyhodnotit(pole)
+    if vyhodnotit(pole) == "x":
+        print("Jsem lepší, ale můžeme to zkusit ještě jednou!")
+    elif vyhodnotit(pole) == "o":
+        print("Gratuluji, porazil si mě.")
+    else:
+        print("Zkusíme to ještě jednou? Alias remíza je nuda")
+
+    piskovrky1d("--------------------")
+
+#12. Piškvorky - tah_pocitace
+def tah_pocitace(pole):
+    """Vrátí herní pole se zaznamenaným tahem počítače"""
+    from random import randrange
+    cislo_policka = randrange(20)
+    while pole[cislo_policka] != "-":
+        cislo_policka = randrange(20)
+    else:
+        return(pole[:cislo_policka],"x",pole[cislo_policka+1:])
+ tah_pocitace(----oxox--xxoo------)
+  
+
+
+# 11. Piškvorky - tah_hrace
+def tah_hrace(pole): #rozhodla jsem se, že PC bude mít x a člověk o
+    """Zeptá se na tah a doplní do herního pole"""
+    cislo_policka = int(input("Zadej číslo pole, na které chceš umístit tvůj symbol, tj. 1 až 20: "))
+    upr_cislo_policka = cislo_policka - 1
+    while cislo_policka > 20 or cislo_policka <= 0:
+        print("Hahaha, asi máš nějaké větší herní pole než já. Zkus to znovu! Věřím, že teď to dáš!")
+        cislo_policka = int(input("Zadej číslo pole, na které chceš umístit tvůj symbol, tj. 1 až 20: "))
+    if 1 <= cislo_policka <= 20 and pole[upr_cislo_policka] != "-":
+        print("Tam už někdo hrál, zkus to znovu")
+        cislo_policka = int(input("Zadej číslo pole, na které chceš umístit tvůj symbol, tj. 1 až 20: "))
+    else:
+        return(pole[:upr_cislo_policka],"o",pole[upr_cislo_policka+1:]) #příjde mi, že se mi tam u doplněného o udělají mezery, jak se jich zbavit?
+tah-hrace(----oxo----xo-------)
+
+
+# 10. Piškorky - tah
+def tah (pole, cislo_policka, symbol):
+    """Vrátí herní pole s daným symbolem umístěnám na danou pozici"""
+    return(pole[:cislo_policka]+symbol+pole[cislo_policka+1:])
+tah(20*"-",3,"o")
+
+# 9. Piškorky - stav hry:
+def vyhodnotit(pole):
+    """Vyhodnotí stav hry"""
+    if "xxx" in pole:
+        return("x")
+    elif "ooo" in pole:
+        return("o")
+    elif "-" not in pole: #nedávám podmínku, že nikdo nevyhrál, protože jak to vyhodnocuje postupně, tak už by se tak stalo v předchozím kroku.
+        return("!")
+    else:
+        return("-")
+vyhodnotit(--xox---------------)
+
+#chtěla jsem si pod každé return hodit i print, abych si ověřila funkčnost, ale nešlo to... tak jsem si to pak vyzkoušela mimo definovanou funkci jen s printy bez return a to šlo....jaký je správný postup pro ověření?
+
+
+#7. Počet k? - nejsem si jistá, jestli jsem si měla pohrát i možnostmi malé a velké
+pisen = """My lover's got humour
+She's the giggle at a funeral
+Knows everybody's disapproval
+I should've worshipped her sooner
+
+If the Heavens ever did speak
+She is the last true mouthpiece
+Every Sunday's getting more bleak
+A fresh poison each week
+
+"We were born sick," you heard them say it
+
+My church offers no absolutes
+She tells me, "Worship in the bedroom."
+The only heaven I'll be sent to
+Is when I'm alone with you
+
+I was born sick,
+but I love it
+Command me to be well
+Aaay. Amen. Amen. Amen.
+
+Take me to church
+I'll worship like a dog at the shrine of your lies
+I'll tell you my sins and you can sharpen your knife
+Offer me that deathless death
+Good God, let me give you my life
+
+Take me to church
+I'll worship like a dog at the shrine of your lies
+I'll tell you my sins and you can sharpen your knife
+Offer me that deathless death
+Good God, let me give you my life
+
+If I'm a pagan of the good times
+My lover's the sunlight
+To keep the Goddess on my side
+She demands a sacrifice
+
+Drain the whole sea
+Get something shiny
+Something meaty for the main course
+
+That's a fine looking high horse
+What you got in the stable?
+We've a lot of starving faithful
+
+That looks tasty
+That looks plenty
+This is hungry world
+
+Take me to church
+I'll worship like a dog at the shrine of your lies
+I'll tell you my sins, so you can sharpen your knife
+Offer me that deathless death,
+Good God, let me give you my life
+
+Take me to church
+I'll worship like a dog at the shrine of your lies
+I'll tell you my sins, so you can sharpen your knife
+Offer me that deathless death,
+Good God, let me give you my life
+
+No Masters or Kings
+when the Ritual begins
+There is no sweeter innocence than our gentle sin
+In the madness and soil of that sad earthly scene
+
+Only then I am human
+Only then I am clean
+Ooh oh. Amen. Amen. Amen.
+
+Take me to church
+I'll worship like a dog at the shrine of your lies
+I'll tell you my sins and you can sharpen your knife
+Offer me that deathless death
+Good God, let me give you my life
+
+Take me to church
+I'll worship like a dog at the shrine of your lies
+I'll tell you my sins and you can sharpen your knife
+Offer me that deathless death
+Good God, let me give you my life..."""
+
+print(pisen.count("k"))
+
+
+#6. odhad pohlaví na základě zadání příjmení, rovnou jsem si definovala funkci....
+def zena_muz():
+    """Odhadne pohlaví uživatelky/uživatele"""
+    prijmeni = input("Zadejte, prosím, Vaše příjmení: ")
+    if prijmeni[-1] == "á" or prijmeni[:-3]== "ová":
+        print("Jsi žena")
+    else:
+        print("Jsi muž")
+
+zena_muz()
+
 #2. napiš funkci, která vykreslí domeček dané velikosti
 from turtle import forward, left, right,exitonclick
 from math import sqrt
