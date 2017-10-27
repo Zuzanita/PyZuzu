@@ -1,1 +1,26 @@
+#2. napiš funkci, která vykreslí domeček dané velikosti
+from turtle import forward, left, right,exitonclick
+from math import sqrt
+
+def nakresli_domecek (strana):
+    """nakreslí osadu domečků podle zadání"""
+    uhlopricka = sqrt(2*strana**2)
+    strecha = uhlopricka*0.5
+    for domecek in range(4):
+        forward(strana)
+        left(90)
+    left(45)
+    forward(uhlopricka)
+    for striska in range(2):
+        left(90)
+        forward(strecha)
+    left(90)
+    forward(uhlopricka)
+    left(45)
+    forward(20)
+
+
+nakresli_domecek(15)
+nakresli_domecek(25)
+nakresli_domecek(35)
 
