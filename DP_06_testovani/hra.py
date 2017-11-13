@@ -1,4 +1,4 @@
 
-from Piskvorky import tah_hrace, tah, vyhodnot, piskvorky1d
+import Piskvorky
 
-piskvorky1d()
+Piskvorky.piskvorky1d()
