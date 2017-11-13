@@ -15,11 +15,14 @@ def tah_hrace():
     pismeno = input("Jaké hádáš písmeno? ")
     stav = delka_slova*"_"
     while True:
-        "_" in stav
         if pismeno in slovo:
             stav = (stav[:slovo.index(pismeno)]+ pismeno +stav[slovo.index(pismeno)+1:])
             print(stav)
-            pismeno = input("Jaké hádáš písmeno? ")
+            if "_" in stav:
+                pismeno = input("Jaké hádáš písmeno? ")
+            else:
+                print("Porazila si mě! Gratuluji!")
+                break
         else:
             neuspesne_pokusy = neuspesne_pokusy + 1
             if neuspesne_pokusy == 1:
@@ -135,6 +138,4 @@ def tah_hrace():
                 print("Game over! Prohrála si!")
                 break
 
-    else:
-        print("Porazila si mě! Gratuluji!")
 tah_hrace()
