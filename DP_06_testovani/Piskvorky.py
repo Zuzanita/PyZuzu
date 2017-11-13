@@ -49,5 +49,3 @@ def piskvorky1d():
             else:
                 print("Zkusíme to ještě jednou? Alias remíza je nuda")
             break
-
-piskvorky1d()
