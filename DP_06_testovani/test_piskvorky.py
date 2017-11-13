@@ -13,8 +13,9 @@
 
 #    assert actual_tah == expected_herni_pole
 
-def test_vyhodnot_vyhra_clovek():
-    pole = "xoxooxx---o-ox------"
-    na_tahu = "x"
-    cislo_policka = 7
-    assert vyhodnot(pole) == "x"
+from Piskvorky import vyhodnotit
+
+
+def test_vyhodnotit_vyhra_clovek():
+    pole = "xoxooxxx--o-ox------"
+    assert vyhodnotit(pole) == "x"
