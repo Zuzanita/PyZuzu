@@ -12,7 +12,7 @@ for jmena_1 in moji_mazlicci:
             spolecni_mazlicci.append(jmena_1)
         elif jmena_1 not in vasi_mazlicci:
             jen_moji.append(jmena_1)
-        elif jmena_2 not in Moji_mazlicci:
+        elif jmena_2 not in moji_mazlicci:
             jen_vasi.append(jmena_2)
 
 print("Společní mazličci jsou", spolecni_mazlicci)
@@ -24,7 +24,7 @@ def seradi_abeceda(seznam):
     """Seřadí daný seznam dle abecedy"""
     print(sorted(seznam))
 
-seradi_abeceda (Dom_zvirata)
+seradi_abeceda (dom_zvirata)
 
 #6.priletela andulka
 dom_zvirata.append("andulka")
