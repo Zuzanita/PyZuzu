@@ -1,26 +1,28 @@
 #0. tvorba seznamu
-Mazlicci = [ 'pes', 'kočka', 'králík','had']
+mazlicci = [ 'pes', 'kočka', 'králík','had']
 
 #1. fce, která vybere mazlíky kratší než 5 písmen
-Vyber_mazliku = []
-def vyber_maz(seznam):
-    for zvire in Mazlicci:
-        if len(zvire) < 5:
-            Vyber_mazliku.append(zvire)
-    print(Vyber_mazliku)
 
-vyber_maz(Mazlicci)
+def vyber_maz(seznam):
+    vyber_mazliku = []
+    for zvire in seznam:
+        if len(zvire) < 5:
+            vyber_mazliku.append(zvire)
+    return(vyber_mazliku)
+
+vyber_maz(mazlicci)
 
 
 
 #2. fce, která vypíše mazlíky, kteří začínají na k
-K_mazel = []
+
 def k_maz(seznam):
-    for zvire in Mazlicci:
+    k_mazel = []
+    for zvire in seznam:
         if zvire[0] == 'k':
-            K_mazel.append(zvire)
-    print(K_mazel)
-k_maz(Mazlicci)
+            k_mazel.append(zvire)
+    return(k_mazel)
+k_maz(mazlicci)
 
 
 
