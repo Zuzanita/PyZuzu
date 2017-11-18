@@ -7,7 +7,7 @@ def test_k_maz_kralik_ano():
 
 def test_vyber_maz_kralik_ne():
     zvire = "kralík"
-    "kralík" not in vyber_maz
+    "kralík" not in vyber_mazliku
 
 def test_vyber_maz_pes_ano():
     zvire = "pes"
