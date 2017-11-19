@@ -1,14 +1,22 @@
 from Mazlicci import vyber_maz, k_maz
 import pytest
 
-def test_k_maz_kralik_ano():
-    zvire = "kralík"
-    "králík" in k_mazel #když tam nemám závorky, tak ho to nezná, když mám, tak syntax error....
-
 def test_vyber_maz_kralik_ne():
-    zvire = "kralík"
-    "kralík" not in vyber_mazliku
+    mazlicci = [ 'pes', 'kočka', 'králík','had']
+    zvire = vyber_maz(mazlicci)
+    assert "kralík" not in vyber_maz(mazlicci)
+
+def test_vyber_maz_kralik_ano():
+    mazlicci = [ 'pes', 'kočka', 'králík','had']
+    zvire = k_maz(mazlicci)
+    assert "králík" in k_maz(mazlicci)
+
+def test_vyber_maz_pes_ne():
+    mazlicci = [ 'pes', 'kočka', 'králík','had']
+    zvire = k_maz(mazlicci)
+    assert "pes" not in k_maz(mazlicci)
 
 def test_vyber_maz_pes_ano():
-    zvire = "pes"
-    "pes" in vyber_mazliku
+    mazlicci = [ 'pes', 'kočka', 'králík','had']
+    zvire = vyber_maz(mazlicci)
+    assert "pes" in vyber_maz(mazlicci)
