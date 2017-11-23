@@ -17,6 +17,6 @@ def nacti_mobil(slovnik):
     except KeyError:
         print("Asi sis spletl číslo. Nikoho takového neznám.")
         jmeno = input("Zadej jméno osoby, u které potřebuješ vědět telefonní číslo: ")
-    print(slovnik[cislo])
+    print(slovnik[jmeno])
 
 nacti_mobil(zlateStranky)

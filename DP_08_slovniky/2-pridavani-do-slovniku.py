@@ -17,11 +17,9 @@ zlateStranky = {
 def pridani_do_slovniku(slovnik):
     """Přidá zvolené jméno a číslo do slovníku. Zkontroluje, zda již daná osoba či číslo ve slovníku není."""
     jmeno = input("Zadej jméno osoby, kterou chceš přidat do Zlatých stránek: ")
-    try:
-        for klic in slovnik.keys():
-            klic != jmeno
-    except KeyError:
-        print("Takový jedinec už tu je. Zkus zadat někoho nového")
+    if jmeno in slovnik:
+            print("Takový jedinec už tu je. Zkus zadat někoho nového")
+            jmeno = input("Zadej jméno osoby, kterou chceš přidat do Zlatých stránek: ")
     tel_cislo = input("Zadej telefonní číslo, které patří dané osobě: ")
     try:
         cislo = int(tel_cislo)
@@ -29,5 +27,5 @@ def pridani_do_slovniku(slovnik):
         print("To nebylo číslo! Zkus to ještě jednou!")
         tel_cislo = input("Zadej telefonní číslo, které patří dané osobě: ")
     slovnik[jmeno] = tel_cislo
-    return slovnik
+    print(slovnik) 
 pridani_do_slovniku(zlateStranky)
