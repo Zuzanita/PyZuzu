@@ -8,14 +8,14 @@ def skautska_hra():
     seznam_otazek = ["Kdo? ", "S kým? ", "Co dělali? ", "Kde? ", "Kdy? ", "Proč? "]
     seznam_odpovedi = []
     delka_seznam_otazek = len(seznam_otazek)
-    print(delka_seznam_otazek)
     zaver = {}
-    for sada in range(0,delka_seznam_otazek):
-        for dotaz in seznam_otazek:
-            odpoved = input(dotaz)
+    for dotaz in seznam_otazek:
+        odpoved = input(dotaz)
+        while odpoved != "":
             seznam_odpovedi.append(odpoved)
-            vybrana_odpoved = random.choice(seznam_odpovedi)
-            zaver[dotaz] = vybrana_odpoved
+            odpoved = input(dotaz)
+        vybrana_odpoved = random.choice(seznam_odpovedi)
+        zaver[dotaz] = vybrana_odpoved
 
     print(zaver)
 
