@@ -12,10 +12,8 @@ zlateStranky = {
 
 def nacti_mobil(slovnik):
     jmeno = input("Zadej jméno osoby, u které potřebuješ vědět telefonní číslo: ")
-    try:
-        jmeno in slovnik
-    except KeyError:
-        print("Asi sis spletl číslo. Nikoho takového neznám.")
+    while jmeno not in slovnik:
+        print("Asi sis spletl jméno. Nikoho takového neznám.")
         jmeno = input("Zadej jméno osoby, u které potřebuješ vědět telefonní číslo: ")
     print(slovnik[jmeno])
 
