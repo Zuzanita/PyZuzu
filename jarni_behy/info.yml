@@ -1,0 +1,113 @@
+title: Začátečnický kurz PyLadies
+subtitle: - Praha (Olšanka) - jaro 2019
+time:
+default_time:
+  start: '18:00'
+  end: '20:00'
+place:  cz.nic, hotel Olšanka, Táboritská 23/1000, Praha 3
+description:
+long_description: |
+    Tady najdeš všechny materiály k pražské verzi začátečnického kurzu PyLadies. Stránky samotných PyLadies jsou na http://pyladies.cz. Jednotlivé lekce jsou určeny naprostým začátečnicím. Instrukce jsou uvedeny pro operační systémy Linux, Windows i macOS.
+
+    Domácí projekty lze odevzdávat na projekty.pyladies.cz.
+derives: pyladies
+vars:
+  pyladies: true
+  coach-present: true
+plan:
+- base: install
+  date: 2019-03-05
+  materials:
+    url: null
+    type: special
+   - lesson: beginners/cmdline
+   - lesson: beginners/install
+   - lesson: beginners/venv-setup
+   - lesson: beginners/first-steps
+   - lesson: beginners/install-editor
+   - title: Tahák na klávesnici (PDF)
+     url: https://pyvec.github.io/cheatsheets/keyboard/keyboard-cs.pdf
+     type: cheatsheet
+
+- base: hello
+  date: 2019-03-12
+
+- base: loops
+  date: 2019-03-19
+  materils:
+    url: null
+    type: special
+    - lesson: beginners/functions
+    - lesson: intro/turtle
+    - title: Tahák s užitečnými funkcemi
+      url: https://pyvec.github.io/cheatsheets/basic-functions/basic-functions-cs.pdf
+      type: cheatsheet
+
+- slug: while and functions
+  title: While & Vlastní funkce
+  date: 2019-03-26
+  materials:
+    url: null
+    type: special
+    - lesson: beginners/while
+    - lesson: beginners/def
+
+- slug: strings
+  title: Řetězce
+  date: 2019-04-02
+  materials:
+    url: null
+    type: special
+    - lesson: beginners/str
+    - title: Řetězcový tahák
+      url: https://pyvec.github.io/cheatsheets/strings/strings-cs.pdf
+      type: cheatsheet
+
+- slug: practice
+  date: 2019-04-09
+
+- base: list
+  date: 2019-04-16
+  materials:
+    url: null
+    type: special
+    - lesson: beginners/list
+    title: Tahák na seznamy
+      url: https://pyvec.github.io/cheatsheets/lists/lists-cs.pdf
+      type: cheatsheet
+
+- base: dict
+  date: 2019-04-23
+  materials:
+    url: null
+    type: special
+    - lesson: beginners/dict
+    title: Slovníkový tahák
+      url: https://pyvec.github.io/cheatsheets/dicts/dicts-cs.pdf
+      type: cheatsheet
+
+- base: tests
+  date: 2019-04-30
+- base: class
+  title: Opakování & Třídy
+
+  date: 2019-05-07
+  materials:
+    url: null
+    type: special
+    lesson: beginners/class
+
+- slug: inheritance
+  title: Třídy & Dědičnost
+  date: 2019-05-14
+  materials:
+    url: null
+    type: special
+    lesson: beginners/inheritance
+
+- base: pyglet
+  date: 2019-05-21
+
+- slug: data
+  title: Datová analýza
+  date: 2019-05-28
